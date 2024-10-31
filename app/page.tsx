@@ -68,7 +68,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-20">
             <div className="text-center">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-                Deutsche <span className="text-blue-400">Volkspartei</span>
+                Demokratische Volkspartei <span className="text-blue-400">Deutschland</span>
               </h1>
               <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 Gemeinsam für ein starkes Deutschland. Innovation, Transparenz und Zukunft.

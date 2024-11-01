@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">DVPD</h3>
-            <p className="text-gray-400">Demokratische Volkspartei Deutschland</p>
+            <p className="text-gray-400">Deutsche Volkspartei</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Kontakt</h3>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-const navItems = ["Startseite", "Programm", "Über Uns", "Aktuelles", "Kontakt"];
+const navItems = ["Startseite", "Mitarbeiter", "Über uns", "Programm", "Aktuelles", "Kontakt"];
 
 export function Navigation() {
   return (

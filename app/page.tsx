@@ -6,6 +6,7 @@ import { Navigation } from "@/components/navigation";
 import { FeatureCard } from "@/components/feature-card";
 import { NewsCard } from "@/components/news-card";
 import { Footer } from "@/components/footer";
+import { LeadershipCard } from "@/components/leadership-card";
 
 const features = [
   {
@@ -49,6 +50,27 @@ const news = [
   }
 ];
 
+const leadership = [
+  {
+    name: "Henrik A. Wolf",
+    position: "Parteivorsitzender",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
+    description: "Visionärer Stratege mit langjähriger Erfahrung in der Politik."
+  },
+  {
+    name: "Jaques W. Lüttig",
+    position: "Generalsekretär",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
+    description: "Experte für internationale Beziehungen und Diplomatie."
+  },
+  {
+    name: "Julius M. Kammler",
+    position: "Schatzmeister",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop",
+    description: "Finanzexperte mit Fokus auf nachhaltige Wirtschaftspolitik."
+  }
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900">
@@ -56,7 +78,7 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <div className="relative min-h-screen flex items-center">
+        <div className="relative min-h-screen flex items-center" id="startseite">
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
@@ -67,8 +89,8 @@ export default function Home() {
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-20">
             <div className="text-center">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-                Demokratische Volkspartei <span className="text-blue-400">Deutschland</span>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                Deutsche <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-transparent bg-clip-text">Volkspartei</span>
               </h1>
               <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 Gemeinsam für ein starkes Deutschland. Innovation, Transparenz und Zukunft.
@@ -81,17 +103,6 @@ export default function Home() {
                   Mehr erfahren
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Features Section */}
-        <div className="bg-gray-900/95 py-24" id="programm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature) => (
-                <FeatureCard key={feature.title} {...feature} />
-              ))}
             </div>
           </div>
         </div>
@@ -138,15 +149,53 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
+        {/* Leadership Section */}
+        <div className="bg-gray-800/50 py-24" id="mitarbeiter">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">Unsere Führung</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {leadership.map((leader) => (
+                <LeadershipCard key={leader.name} {...leader} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Features Section */}
+        <div className="bg-gray-900/95 py-24" id="programm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature) => (
+                <FeatureCard key={feature.title} {...feature} />
+              ))}
+            </div>
+          </div>
+        </div>
 
         {/* News Section */}
-        <div className="bg-gray-900/95 py-24" id="aktuelles">
+        <div className="bg-gray-800/50 py-24" id="aktuelles">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-white mb-12 text-center">Aktuelles</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {news.map((item) => (
                 <NewsCard key={item.title} {...item} />
               ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Section */}
+        <div className="bg-gray-900/95 py-24" id="kontakt">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Kontaktieren Sie uns</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Wir sind immer für Sie da. Lassen Sie uns gemeinsam die Zukunft gestalten.
+            </p>
+            <div className="inline-flex gap-4">
+              <button className="px-8 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-all duration-300">
+                Kontakt aufnehmen
+              </button>
             </div>
           </div>
         </div>
